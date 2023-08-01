@@ -93,3 +93,22 @@ Solution
 For this problem , as mention in explanation 
 Calculate the greatest among the kid 
 Iterate over each kid candies and Now check if after adding extra candy to each candy   is less or greater than the greatest among the kid and accordingly put their boolean values 
+
+Day4
+Problem no: 605
+
+You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
+Given an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return true if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule and false otherwise.
+ 
+Example 1:
+Input: flowerbed = [1,0,0,0,1], n = 1
+Output: true
+
+Example 2:
+Input: flowerbed = [1,0,0,0,1], n = 2
+Output: false
+
+Solution 
+For this problem , as shown in example 
+Check if element at index before and after and current position should e zero 
+(exception condition when n-1 does not exit put a or condition  it with index which is first element similarly for the last element )
