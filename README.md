@@ -112,3 +112,27 @@ Solution
 For this problem , as shown in example 
 Check if element at index before and after and current position should e zero 
 (exception condition when n-1 does not exit put a or condition  it with index which is first element similarly for the last element )
+
+Day5 Problem no: 345
+
+Given a string s, reverse only all the vowels in the string and return it.
+The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+ 
+Example 1:
+Input: s = "hello"
+Output: "holle"
+
+Example 2:
+Input: s = "leetcode"
+Output: "leotcede"
+
+Solution 
+
+
+For this problem ,
+Step 1 :create a array of vowels 
+Step 2 : initialize two pointer start and end to loop 
+Step 3 : convert the string to array 
+Step 4 : loop until start is less than end 
+Step 5 : inside loop, again loop until it found a vowel , increase and decrease pointers accordingly 
+Step : swap now 
