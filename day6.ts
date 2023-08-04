@@ -33,7 +33,7 @@ function reverseWords(s: string): string {
         resultString+=" "+reverseArr[index];
        }
      } 
-     return resultString;
+     return  resultString.trim();
    };
 
    let reverString = reverseWords("the sky is blue")

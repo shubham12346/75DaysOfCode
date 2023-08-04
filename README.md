@@ -136,3 +136,51 @@ Step 3 : convert the string to array
 Step 4 : loop until start is less than end 
 Step 5 : inside loop, again loop until it found a vowel , increase and decrease pointers accordingly 
 Step : swap now 
+Day6 Problem no: 151
+Given an input string s, reverse the order of the words.
+A word is defined as a sequence of non-space characters. The words in s will be separated
+by at least one space.
+Return a string of the words in reverse order concatenated by a single space.
+Note that s may contain leading or trailing spaces or multiple spaces between two words. The
+returned string should only have a single space separating the words. Do not include any
+extra spaces.
+Example 1:
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+Example 2:
+Input: s = " hello world "
+Output: "world hello"
+Explanation: Your reversed string should not contain leading or trailing spaces.
+Solution
+For this problem ,
+Step 1. Trim and Split string into array with single blankspace and store it
+Step 2 . Reverse the stored array
+Step 3. Loop the reversed array and concatenate only the string with length
+greater than 1 with an blank space ;
+Shubham Agrahari
+Step 4 : return the result string after trimming again ;
+
+
+Day7  Problem no: 238
+
+Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
+You must write an algorithm that runs in O(n) time and without using the division operation.
+ 
+Example 1:
+Input: nums = [1,2,3,4]
+Output: [24,12,8,6]
+
+Example 2:
+Input: nums = [-1,1,0,-3,3]
+Output: [0,0,9,0,0]
+
+
+Solution 
+
+
+For this problem following brute force approach 
+Iterate over two loops 
+After the first loop initialize a variable for multiplication of that index
+Check condition (i==j) it should not calculate multiplication of its own 
+
