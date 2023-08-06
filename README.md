@@ -184,3 +184,59 @@ Iterate over two loops
 After the first loop initialize a variable for multiplication of that index
 Check condition (i==j) it should not calculate multiplication of its own 
 
+Day8 Problem no: 334
+Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i < j
+< k and nums[i] < nums[j] < nums[k]. If no such indices exists, return false.
+Example 1:
+Input: nums = [1,2,3,4,5]
+Output: true
+Explanation: Any triplet where i < j < k is valid.
+Example 2:
+Input: nums = [5,4,3,2,1]
+Output: false
+Explanation: No triplet exists.
+Solution
+For this problem , to get num[i]<num[j]<num[k]
+1 . Iterate over the loop and calculate nums[i] and num[j];
+2. To calculate num[i] and num[j] , we initialize two variable at tops as max1 and max2
+3. If we found max1 and max2 , so if there will be any element greater than these 2 , will
+hit the last condition which return true and stops the loop
+
+Day9 Problem no: 443
+Companies
+Given an array of characters chars, compress it using the following algorithm:
+Begin with an empty string s. For each group of consecutive repeating characters in chars:
+● If the group's length is 1, append the character to s.
+● Otherwise, append the character followed by the group's length.
+The compressed string s should not be returned separately, but instead, be stored in the
+input character array chars. Note that group lengths that are 10 or longer will be split into
+multiple characters in chars.
+After you are done modifying the input array, return the new length of the array.
+You must write an algorithm that uses only constant extra space.
+Example 1:
+Input: chars = ["a","a","b","b","c","c","c"]
+Output: Return 6, and the first 6 characters of the input array should be:
+["a","2","b","2","c","3"]
+Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3".
+Example 2:
+Input: chars = ["a"]
+Output: Return 1, and the first character of the input array should be: ["a"]
+Explanation: The only group is "a", which remains uncompressed since it's a single
+character.
+Example 3:
+Input: chars = ["a","b","b","b","b","b","b","b","b","b","b","b","b"]
+Output: Return 4, and the first 4 characters of the input array should be: ["a","b","1","2"].
+Explanation: The groups are "a" and "bbbbbbbbbbbb". This compresses to "ab12".
+For this problem ,
+Shubham Agrahari
+1. I am using here two pointers for this problem
+2. Iterate through the chars array length up to second last element
+3. We initialize pointerOne as the current element and pointer two as the next
+element and initially the count is 1.
+4. On each iteration we will check if current element and next element are not equal
+, if not then we will check the count if one then only the string is concatenated
+else both string and count is concatenated . if both pointer are equal than count
+will increase
+5. In loop we can’t check the last element , so last element is checked outside the
+loop and after that we will modify the give input array and return our
+concatenated string’s length;
