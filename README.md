@@ -240,3 +240,30 @@ will increase
 5. In loop we can’t check the last element , so last element is checked outside the
 loop and after that we will modify the give input array and return our
 concatenated string’s length;
+
+Day10  Problem no: 283
+
+
+
+
+
+
+Companies
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+Note that you must do this in-place without making a copy of the array.
+ 
+Example 1:
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+
+Example 2:
+Input: nums = [0]
+Output: [0]
+
+For this problem ,
+Note - we have to do it in place means  have to modify original array instead of creating of new array 
+Taking two pointers as left =0 , right  = 1  and loop the array while right < array’s length . 
+Swap the two element when first element is zero and second is not .
+If both the pointers number is zero than increase right index 
+Else  increase both the pointers 
