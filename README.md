@@ -408,3 +408,35 @@ Slide the sum var (intial window) starting with k  upto  total number.length -k 
 Return the ans as maxnum/k 
 
 
+Day15  Problem no: 1456. Maximum Number of Vowels in a Substring of Given Length  (leetcode)
+
+Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
+
+
+Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
+ 
+Example 1:
+Input: s = "abciiidef", k = 3
+Output: 3
+Explanation: The substring "iii" contains 3 vowel letters.
+Example 2:
+
+Input: s = "aeiou", k = 2
+Output: 2
+Explanation: Any substring of length 2 contains 2 vowels.
+
+For this problem , we are gonna use sliding window approach 
+
+
+Key terms to know problem can be solved by sliding window  :
+Question includes : Array ,SubArray , SubString , Largest , Smallest ,Maximum and Minimum  with window size may or may not present 
+Solution of the above problem using sliding window 
+
+
+Calculate the initial count of letters in string up to k for initial window (Initialization nad process with initial calculation  ) 
+Initialize a  variable as maxsum before starting sliding  through the loop 
+Slide the initialCount var (intial window) starting with k  upto  total number.length -k  (Sliding the window , update and repeat )
+Return the ans as maxCountOfVowel 
+
+
+
