@@ -438,5 +438,36 @@ Initialize a  variable as maxsum before starting sliding  through the loop
 Slide the initialCount var (intial window) starting with k  upto  total number.length -k  (Sliding the window , update and repeat )
 Return the ans as maxCountOfVowel 
 
+Day16  Problem no:  1004. Max Consecutive Ones III (leetCode)  (leetcode)
+
+Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
+ 
+Example 1:
+Input: nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2
+Output: 6
+Explanation: [1,1,1,0,0,1,1,1,1,1,1]
+Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
+Example 2:
+
+
+Input: nums = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], k = 3
+Output: 10
+Explanation: [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1]
+Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
+
+
+For this problem , we are gonna use sliding window approach 
+
+
+Key terms to know problem can be solved by sliding window  :
+Question includes : Array ,SubArray , SubString , Largest , Smallest ,Maximum and Minimum  with window size may or may not present 
+Solution of the above problem using sliding window 
+
+
+Initialize two pointers as start and consOne .
+Start the loop , when current number is zero then decrease the k 
+If k becomes negative then , start a loop to remove previously flipped zeroes , by increasing the start pointer and k , get out of loop when k is positive 
+At each iteration compare the maximum with largest length from index to where the start pointer is .
+
 
 
