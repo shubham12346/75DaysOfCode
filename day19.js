@@ -1,3 +1,4 @@
+"use strict";
 // 724. Find Pivot Index
 // Given an array of integers nums, calculate the pivot index of this array.
 // The pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index's right.
@@ -23,15 +24,15 @@
 // Left sum = 0 (no elements to the left of index 0)
 // Right sum = nums[1] + nums[2] = 1 + -1 = 0
 function pivotIndex(nums) {
-    var postfixSum = [];
-    var sum = 0;
-    for (var numIndex = nums.length - 1; numIndex >= 0; numIndex--) {
+    let postfixSum = [];
+    let sum = 0;
+    for (let numIndex = nums.length - 1; numIndex >= 0; numIndex--) {
         sum += nums[numIndex];
         postfixSum.unshift(sum);
     }
     sum = 0;
-    var pivotIndex = -1;
-    for (var numIndex = 0; numIndex < nums.length; numIndex++) {
+    let pivotIndex = -1;
+    for (let numIndex = 0; numIndex < nums.length; numIndex++) {
         sum += nums[numIndex];
         if (sum === postfixSum[numIndex]) {
             return numIndex;
@@ -39,5 +40,5 @@ function pivotIndex(nums) {
     }
     return pivotIndex;
 }
-var answer = pivotIndex([1, 7, 3, 6, 5, 6]);
+let answer = pivotIndex([1, 7, 3, 6, 5, 6]);
 console.log("Answer : ", answer);

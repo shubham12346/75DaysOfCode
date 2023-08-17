@@ -1,3 +1,4 @@
+"use strict";
 // 1679. Max Number of K-Sum Pairs
 // Medium
 // 2.5K
@@ -20,12 +21,12 @@
 // - Remove the first two 3's, then nums = [1,4,3]
 // There are no more pairs that sum up to 6, hence a total of 1 operation.
 function maxOperations(nums, k) {
-    var startIndex = 0;
-    var endIndex = nums.length - 1;
-    var nums2 = nums.sort(function (a, b) { return a - b; });
-    var count = 0;
+    let startIndex = 0;
+    let endIndex = nums.length - 1;
+    let nums2 = nums.sort((a, b) => a - b);
+    let count = 0;
     while (startIndex < endIndex) {
-        var sum = nums2[startIndex] + nums2[endIndex];
+        let sum = nums2[startIndex] + nums2[endIndex];
         if (sum === k) {
             count++;
             startIndex++;
@@ -40,5 +41,5 @@ function maxOperations(nums, k) {
     }
     return count;
 }
-var answer = maxOperations([3, 1, 3, 4, 3], 6);
+let answer = maxOperations([3, 1, 3, 4, 3], 6);
 console.log("Answer : ", answer);

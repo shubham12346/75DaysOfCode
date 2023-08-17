@@ -1,3 +1,4 @@
+"use strict";
 // 345. Reverse Vowels of a String
 // Easy
 // 3.8K
@@ -12,10 +13,10 @@
 // Input: s = "leetcode"
 // Output: "leotcede"
 function reverseVowels(s) {
-    var vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
-    var chars = s.split('');
-    var left = 0;
-    var right = s.length - 1;
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+    const chars = s.split('');
+    let left = 0;
+    let right = s.length - 1;
     while (left < right) {
         while (left < right && !vowels.has(s[left])) {
             left++;
@@ -24,7 +25,7 @@ function reverseVowels(s) {
             right--;
         }
         if (left < right) {
-            var temp = chars[left];
+            const temp = chars[left];
             chars[left] = chars[right];
             chars[right] = temp;
             left++;
@@ -34,5 +35,5 @@ function reverseVowels(s) {
     return chars.join('');
 }
 ;
-var v = reverseVowels("hello");
+let v = reverseVowels("hello");
 console.log(v);

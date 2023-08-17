@@ -1,3 +1,4 @@
+"use strict";
 // 11. Container With Most Water
 // Companies
 // You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
@@ -12,10 +13,10 @@
 // Input: height = [1,1]
 // Output: 1
 function maxArea(height) {
-    var startIndex = 0;
-    var endIndex = height.length - 1;
-    var area = Number.MIN_VALUE;
-    var maxArea = Number.MIN_VALUE;
+    let startIndex = 0;
+    let endIndex = height.length - 1;
+    let area = Number.MIN_VALUE;
+    let maxArea = Number.MIN_VALUE;
     while (startIndex < endIndex) {
         area =
             Math.min(height[startIndex], height[endIndex]) * (endIndex - startIndex);
@@ -31,5 +32,5 @@ function maxArea(height) {
     }
     return maxArea;
 }
-var res = maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]);
+let res = maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]);
 console.log(res);

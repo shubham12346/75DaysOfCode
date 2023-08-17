@@ -1,3 +1,4 @@
+"use strict";
 // 1732. Find the Highest Altitude (leetcode)
 // There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
 // You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.
@@ -10,12 +11,12 @@
 // Output: 0
 // Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
 function largestAltitude(gain) {
-    var maxGain = 0, sum = 0;
-    for (var numIndex = 0; numIndex < gain.length; numIndex++) {
+    let maxGain = 0, sum = 0;
+    for (let numIndex = 0; numIndex < gain.length; numIndex++) {
         sum += gain[numIndex];
         maxGain = Math.max(sum, maxGain);
     }
     return maxGain;
 }
-var answer = largestAltitude([-4, -3, -2, -1, 4, 3, 2]);
+let answer = largestAltitude([-4, -3, -2, -1, 4, 3, 2]);
 console.log("Answer : ", answer);

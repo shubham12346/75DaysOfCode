@@ -1,3 +1,4 @@
+"use strict";
 // 283. Move Zeroes
 // Easy
 // 14.7K
@@ -15,11 +16,11 @@
  Do not return anything, modify nums in-place instead.
  */
 function moveZeroes(nums) {
-    var leftIndex = 0;
-    var rightIndex = 1;
+    let leftIndex = 0;
+    let rightIndex = 1;
     while (rightIndex < nums.length) {
-        var leftNum = nums[leftIndex];
-        var rightNum = nums[rightIndex];
+        let leftNum = nums[leftIndex];
+        let rightNum = nums[rightIndex];
         if (leftNum === 0 && rightNum !== 0) {
             nums[leftIndex] = rightNum;
             nums[rightIndex] = leftNum;
@@ -33,6 +34,6 @@ function moveZeroes(nums) {
         }
     }
 }
-var ans = [0, 1, 0, 3, 12];
+let ans = [0, 1, 0, 3, 12];
 moveZeroes(ans);
 console.log(ans);

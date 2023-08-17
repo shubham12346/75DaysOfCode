@@ -1,3 +1,4 @@
+"use strict";
 // 1004. Max Consecutive Ones III (leetCode)
 // Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
 // Example 1:
@@ -11,9 +12,9 @@
 // Explanation: [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1]
 // Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 function longestOnes(nums, k) {
-    var consecutiveOnes = 0;
-    var startPointer = 0;
-    for (var index = 0; index < nums.length; index++) {
+    let consecutiveOnes = 0;
+    let startPointer = 0;
+    for (let index = 0; index < nums.length; index++) {
         if (nums[index] === 0) {
             k--;
         }
@@ -27,5 +28,5 @@ function longestOnes(nums, k) {
     }
     return consecutiveOnes;
 }
-var answer = longestOnes([0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3);
+let answer = longestOnes([0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3);
 console.log("Answer :", answer);

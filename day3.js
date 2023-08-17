@@ -1,3 +1,4 @@
+"use strict";
 // 1431. Kids With the Greatest Number of Candies
 // Easy
 // 3.6K
@@ -16,14 +17,13 @@
 // - Kid 4, they will have 1 + 3 = 4 candies, which is not the greatest among the kids.
 // - Kid 5, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
 function kidsWithCandies(candies, extraCandies) {
-    var kidWithGreatestCandy = [];
-    var maxElement = Number.MIN_VALUE;
-    for (var index = 0; index < candies.length; index++) {
+    let kidWithGreatestCandy = [];
+    let maxElement = Number.MIN_VALUE;
+    for (let index = 0; index < candies.length; index++) {
         maxElement = Math.max(maxElement, candies[index]);
     }
-    for (var _i = 0, candies_1 = candies; _i < candies_1.length; _i++) {
-        var candy = candies_1[_i];
-        var candyAfterAddingExtraCandy = candy + extraCandies;
+    for (let candy of candies) {
+        let candyAfterAddingExtraCandy = candy + extraCandies;
         if (candyAfterAddingExtraCandy < maxElement) {
             kidWithGreatestCandy.push(false);
         }
@@ -34,5 +34,5 @@ function kidsWithCandies(candies, extraCandies) {
     return kidWithGreatestCandy;
 }
 ;
-var getCandyResult = kidsWithCandies([2, 3, 5, 1, 3], 3);
+let getCandyResult = kidsWithCandies([2, 3, 5, 1, 3], 3);
 console.log(getCandyResult);

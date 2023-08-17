@@ -1,3 +1,4 @@
+"use strict";
 // 1456. Maximum Number of Vowels in a Substring of Given Length
 // Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
 // Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
@@ -12,16 +13,16 @@
 function maxVowels(s, k) {
     if (s.length < k)
         return -1;
-    var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-    var initialCountOfVowel = 0;
-    for (var stringIndex = 0; stringIndex < k; stringIndex++) {
+    let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+    let initialCountOfVowel = 0;
+    for (let stringIndex = 0; stringIndex < k; stringIndex++) {
         if (vowels.includes(s[stringIndex])) {
             initialCountOfVowel++;
         }
     }
-    var maxVowelCount = initialCountOfVowel;
-    var startIndex = 0;
-    for (var endIndex = k; endIndex < s.length; endIndex++) {
+    let maxVowelCount = initialCountOfVowel;
+    let startIndex = 0;
+    for (let endIndex = k; endIndex < s.length; endIndex++) {
         if (vowels.includes(s[startIndex])) {
             initialCountOfVowel--;
         }
@@ -33,5 +34,5 @@ function maxVowels(s, k) {
     }
     return maxVowelCount;
 }
-var answer = maxVowels("aeiou", 2);
+let answer = maxVowels("aeiou", 2);
 console.log("Answer :", answer);

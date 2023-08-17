@@ -1,3 +1,4 @@
+"use strict";
 // 443. String Compression
 // Medium
 // 4.1K
@@ -25,11 +26,11 @@
 function compress(chars) {
     if (chars.length === 1)
         return 1;
-    var pointerChar1 = "";
-    var pointerChar2 = "";
-    var count = 1;
-    var compressChars = "";
-    for (var charIndex = 0; charIndex < chars.length - 1; charIndex++) {
+    let pointerChar1 = "";
+    let pointerChar2 = "";
+    let count = 1;
+    let compressChars = "";
+    for (let charIndex = 0; charIndex < chars.length - 1; charIndex++) {
         pointerChar1 = chars[charIndex];
         pointerChar2 = chars[charIndex + 1];
         if (pointerChar1 != pointerChar2) {
@@ -53,10 +54,10 @@ function compress(chars) {
         compressChars += pointerChar2;
         compressChars += count.toString();
     }
-    for (var charIndex = 0; charIndex < compressChars.length; charIndex++) {
+    for (let charIndex = 0; charIndex < compressChars.length; charIndex++) {
         chars[charIndex] = compressChars[charIndex];
     }
     return compressChars.length;
 }
-var cmp = compress(["a", "a", "b", "b", "c", "c", "c"]);
+let cmp = compress(["a", "a", "b", "b", "c", "c", "c"]);
 console.log(cmp);

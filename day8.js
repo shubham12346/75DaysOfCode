@@ -1,3 +1,4 @@
+"use strict";
 // Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i < j < k and nums[i] < nums[j] < nums[k]. If no such indices exists, return false.
 // Example 1:
 // Input: nums = [1,2,3,4,5]
@@ -10,9 +11,9 @@
 function increasingTriplet(nums) {
     if (nums.length <= 2)
         return false;
-    var max1 = Number.MAX_VALUE;
-    var max2 = Number.MAX_VALUE;
-    for (var index = 0; index < nums.length; index++) {
+    let max1 = Number.MAX_VALUE;
+    let max2 = Number.MAX_VALUE;
+    for (let index = 0; index < nums.length; index++) {
         if (nums[index] <= max1) {
             max1 = nums[index];
         }
@@ -26,5 +27,5 @@ function increasingTriplet(nums) {
     return false;
 }
 ;
-var soln = increasingTriplet([5, 4, 3, 2, 1]);
+let soln = increasingTriplet([5, 4, 3, 2, 1]);
 console.log(soln);

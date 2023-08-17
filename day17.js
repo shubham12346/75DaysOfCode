@@ -1,3 +1,4 @@
+"use strict";
 // 1493. Longest Subarray of 1's After Deleting One Element
 // Given a binary array nums, you should delete one element from it.
 // Return the size of the longest non-empty subarray containing only 1's in the resulting array. Return 0 if there is no such subarray.
@@ -14,10 +15,10 @@
 // Output: 2
 // Explanation: You must delete one element.
 function longestSubarray(nums) {
-    var startPointer = 0;
-    var zeroCount = 1;
-    var maxOnes = Number.MIN_VALUE;
-    for (var numIndex = 0; numIndex < nums.length; numIndex++) {
+    let startPointer = 0;
+    let zeroCount = 1;
+    let maxOnes = Number.MIN_VALUE;
+    for (let numIndex = 0; numIndex < nums.length; numIndex++) {
         if (nums[numIndex] == 0) {
             zeroCount--;
         }
@@ -31,5 +32,5 @@ function longestSubarray(nums) {
     }
     return maxOnes;
 }
-var answer = longestSubarray([0, 1, 1, 1, 0, 1, 1, 0, 1]);
+let answer = longestSubarray([0, 1, 1, 1, 0, 1, 1, 0, 1]);
 console.log("Answer :", answer);

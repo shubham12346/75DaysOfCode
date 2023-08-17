@@ -1,3 +1,4 @@
+"use strict";
 // 392. Is Subsequence
 // Easy
 // 8K
@@ -12,8 +13,8 @@
 // Input: s = "axc", t = "ahbgdc"
 // Output: false
 function isSubsequence(s, t) {
-    var pointer1 = 0;
-    var pointer2 = 0;
+    let pointer1 = 0;
+    let pointer2 = 0;
     while (pointer2 < t.length) {
         if (s[pointer1] === t[pointer2]) {
             pointer1++;
@@ -25,5 +26,5 @@ function isSubsequence(s, t) {
     }
     return false;
 }
-var ans = isSubsequence("abc", "abcdefgh");
+let ans = isSubsequence("abc", "abcdefgh");
 console.log(ans);
