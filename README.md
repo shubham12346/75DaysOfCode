@@ -500,18 +500,15 @@ We initialize two variables one is sum and another is postfixSum which is empty 
 We Loop through the nums array in reverse and create the postfixSum array in each iteration
 Now again we loop again from start to end , and initialize sum as zero again , and on each iteration we compare sum which is addition of current element and compare with postfixSum current index , whenever current sum equal postfixSumm ‘s element then return index else after loop return -1
 
-Day 20  Problem no:  2215. Find the Difference of Two Arrays
- (leetcode) 
-Type - Hashmap/Set 
-
+Day 20 Problem no: 2215. Find the Difference of Two Arrays
+(leetcode)
+Type - Hashmap/Set
 
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
 
 answer[0] is a list of all distinct integers in nums1 which are not present in nums2.
 answer[1] is a list of all distinct integers in nums2 which are not present in nums1.
 Note that the integers in the lists may be returned in any order.
-
- 
 
 Example 1:
 
@@ -528,8 +525,38 @@ Explanation:
 For nums1, nums1[2] and nums1[3] are not present in nums2. Since nums1[2] == nums1[3], their value is only included once and answer[0] = [3].
 Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
 
+Solution of the above problem using set and filter method
+Converting given two num arrays into set which will remove the duplicates
+Using filter method removing the common element in both array
 
+Day 21 Problem no: 1207. Unique Number of Occurrences
+Type Hashmap /Sets
 
-Solution of the above problem  using set and filter method 
-Converting given two num arrays into set which will remove the duplicates 
-Using filter method  removing the common element in both array 
+Given an array of integers arr, return true if the number of occurrences of each value in the array is unique or false otherwise.
+
+Example 1:
+
+Input: arr = [1,2,2,1,1,3]
+Output: true
+Explanation: The value 1 has 3 occurrences, 2 has 2 and 3 has 1. No two values have the same number of occurrences.
+Example 2:
+
+Input: arr = [1,2]
+Output: false
+Example 3:
+
+Input: arr = [-3,0,1,-3,1,1,1,-3,10,0]
+Output: true
+
+Solution of the above problem using Brute force approach
+Create a array of unique elements
+Start a loop in the unique element , inside the loop create a nested loop for original array , on each iteration we are adding the count of unique element if uniqueArr[indexPointer] === arr[index] , when the for loop end we push this count to a new array named as countArr
+After the end of both loop ,we create a new array of unique counts of the countArray of all the element before
+We compare both and return result
+
+Solution of above problem using in Optimize way using map and set
+Using map can solve this problem with single loop instead of nested loop
+Initialize an empty has map and start a loop to the array given to us
+Here we are adding map key as unique element and their value as count
+After the loop end , we initialize an empty array
+We push the count of map key in this array by checking the repetition of number , if any number repeats it will return false else true after loop ends
