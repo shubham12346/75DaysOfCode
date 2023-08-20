@@ -600,3 +600,37 @@ Using logic, we list out all the possible logical ways this can either be true o
 Length of two strings must be equal
 They should not contain different characters, they must have the same characters, the number of occurrences or the count of each character does not matter.
 The two arrays arr1 and arr2 of character occurence's count, when sorted, should be equal.
+
+75 Days of Code Day 23 Problem no:2352. Equal Row and Column Pairs (leetcode)
+Type Hashmap /Sets
+
+Given a 0-indexed n x n integer matrix grid, return the number of pairs (ri, cj) such that row ri and column cj are equal.
+
+A row and column pair is considered equal if they contain the same elements in the same order (i.e., an equal array).
+
+Example 1:
+
+Input: grid = [[3,2,1],[1,7,6],[2,7,7]]
+Output: 1
+Explanation: There is 1 equal row and column pair:
+
+- (Row 2, Column 1): [2,7,7]
+  Example 2:
+
+Input: grid = [[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]
+Output: 3
+Explanation: There are 3 equal row and column pairs:
+
+- (Row 0, Column 0): [3,1,2,2]
+- (Row 2, Column 2): [2,4,2,2]
+- (Row 3, Column 2): [2,4,2,2]
+
+Solution using brute force
+One loop for row iteration
+Another for column iteration
+Again one as we have check one row for all the columns so
+
+Solution of above problem using in Optimize way using map
+Create a map of row ,in which row elements are keys and row’s repetition is the value
+Use a two for loop to iterate through the columns of the matrix and create a column
+Check if the column exist in row map , if exist check its value (which is its count ) then add to original count
