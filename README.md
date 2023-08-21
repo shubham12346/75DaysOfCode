@@ -635,7 +635,7 @@ Create a map of row ,in which row elements are keys and row’s repetition is th
 Use a two for loop to iterate through the columns of the matrix and create a column
 Check if the column exist in row map , if exist check its value (which is its count ) then add to original count
 
-75 Days of Code Day 23 Problem no:2390. Removing Stars From a String (leetcode)
+75 Days of Code Day 24 Problem no:2390. Removing Stars From a String (leetcode)
 Type : Stacks
 
 You are given a string s, which contains stars \*.
