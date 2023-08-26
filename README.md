@@ -800,3 +800,44 @@ Solution using Stack
 We will create two arrays as radiant queue and dire queue and push all characters in string r to radiant and s to dire using a loop
 We will delete first element from both array and push to one which index is lower as (index + n ) until both of arrays become empty
 Return checking if radiant queue is empty
+
+75 Days of Code Day 29 2095. Delete the Middle Node of a Linked List
+(leetcode)
+Type : Linked List
+
+You are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.
+
+The middle node of a linked list of size n is the ⌊n / 2⌋th node from the start using 0-based indexing, where ⌊x⌋ denotes the largest integer less than or equal to x.
+
+For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.
+
+Example 1:
+
+Input: head = [1,3,4,7,1,2,6]
+Output: [1,3,4,1,2,6]
+Explanation:
+The above figure represents the given linked list. The indices of the nodes are written below.
+Since n = 7, node 3 with value 7 is the middle node, which is marked in red.
+We return the new list after removing this node.
+Example 2:
+
+Input: head = [1,2,3,4]
+Output: [1,2,4]
+Explanation:
+The above figure represents the given linked list.
+For n = 4, node 2 with value 3 is the middle node, which is marked in red.
+Example 3:
+
+Input: head = [2,1]
+Output: [2]
+Explanation:
+The above figure represents the given linked list.
+For n = 2, node 1 with value 1 is the middle node, which is marked in red.
+Node 0 with value 2 is the only node remaining after removing node 1.
+
+Solution using array
+
+Solution using fast and slow algorithm
+We are using fast and slow algorithm , so we create fast , slow and prev as three pointer to traverse
+The fast will move 2 steps , slow will move one step , when fast reach end of the list slow will reach the middle , prev will point the previous slow
+we will just change the prev pointer next to slow’s next element so the middle element will be deleted
