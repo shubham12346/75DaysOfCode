@@ -841,3 +841,33 @@ Solution using fast and slow algorithm
 We are using fast and slow algorithm , so we create fast , slow and prev as three pointer to traverse
 The fast will move 2 steps , slow will move one step , when fast reach end of the list slow will reach the middle , prev will point the previous slow
 we will just change the prev pointer next to slow’s next element so the middle element will be deleted
+
+75 Days of Code Day 30 328. Odd Even Linked List
+(leetcode)
+Type : Linked List
+
+Medium
+
+Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
+
+The first node is considered odd, and the second node is even, and so on.
+
+Note that the relative order inside both the even and odd groups should remain as it was in the input.
+
+You must solve the problem in O(1) extra space complexity and O(n) time complexity.
+
+Example 1:
+
+Input: head = [1,2,3,4,5]
+Output: [1,3,5,2,4]
+Example 2:
+
+Input: head = [2,1,3,5,6,4,7]
+Output: [2,3,6,7,1,5,4]
+
+Solution using array
+
+This solution fails o(1) space complexity so now
+
+Solution using fast and slow algorithm
+We are going to create two linked list one is even list and other is odd list and after that we link oddlist with even list
