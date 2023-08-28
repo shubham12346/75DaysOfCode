@@ -51,7 +51,7 @@ function reverseList(head: ListNode | null): ListNode | null {
   return newReverseList;
 }
 
-function reverseList(head: ListNode | null): ListNode | null {
+function reverseListOptimize(head: ListNode | null): ListNode | null {
   if (!head || !head.next) {
     return head;
   }
