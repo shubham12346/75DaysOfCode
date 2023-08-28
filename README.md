@@ -871,3 +871,24 @@ This solution fails o(1) space complexity so now
 
 Solution using fast and slow algorithm
 We are going to create two linked list one is even list and other is odd list and after that we link oddlist with even list
+
+75 Days of Code Day 31 206. Reverse Linked List
+(leetcode)
+Type : Linked List
+
+Medium
+
+Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+Example 1:
+
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
+Example 2:
+
+Input: head = [1,2]
+Output: [2,1]
+Example 3:
+
+Input: head = []
+Output: []
