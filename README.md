@@ -1528,3 +1528,28 @@ Input: k = 4, n = 1
 Output: []
 Explanation: There are no valid combinations.
 Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 > 1, there are no valid combination.
+
+75 Days of Code
+Day 59
+Problem no : Leetcode 1137
+Problem Title : N-th Tribonacci Number
+Problem type : DP
+
+.
+The Tribonacci sequence Tn is defined as follows:
+
+T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
+
+Given n, return the value of Tn.
+
+Example 1:
+
+Input: n = 4
+Output: 4
+Explanation:
+T_3 = 0 + 1 + 1 = 2
+T_4 = 1 + 1 + 2 = 4
+Example 2:
+
+Input: n = 25
+Output: 1389537
